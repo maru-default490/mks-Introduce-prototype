@@ -9,7 +9,8 @@ const HeaderStyled = styled.div`
         display:flex;
         justify-content: space-between;
         align-items:center;
-        padding-left:20px;
+        background-color:#fff;
+        box-shadow:0 2px 4px 0 hsla(0,0%,0%,0.05);
     }
     .logo{
         font-size:45px;
@@ -20,19 +21,23 @@ const HeaderStyled = styled.div`
         width:200px;
         display:flex;
         flex-direction: row;
-        padding-right:20px;
     }
     header ul li{
         list-style:none;
-        margin-left:20px;
+        margin:0;
     }
+
     header ul li:first-child::after{
-        margin-left:20px;
-        content:"|"
+        content:"|";
+        margin:0px 20px;
     }
     header ul li a{
         color:black;
         text-decoration:none;
+    }
+
+    .selected{
+        color:#e8351d;
     }
 `;
 
@@ -43,7 +48,7 @@ class Header extends( Component ){
                 <header>
                     <a href="#" className="logo"><Makestartext /></a>
                     <ul>
-                        <li><a href="#">회사 소개</a></li>
+                        <li><a href="#" className="selected">회사 소개</a></li>
                         <li><a href="#">채용</a></li>
                     </ul>
                 </header>

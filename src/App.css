@@ -1,38 +1,224 @@
-.App {
+*{
+  margin: 0 auto;
+  padding: 0;
+  text-decoration: none;
+}
+
+#slogan-wrapper{
+  width:100%;
+  height: calc(100vh - 100px);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slogan{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.slogan > h1{
+  font-size:100px;
+}
+
+.slogan > p{
+  font-size: 24px;
+  text-align: center;
+  margin-top:16px;
+}
+
+#core-values{
+  width:100%;
+  height: 1000px;
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#core-values > h1{
+  font-size:30px;
+}
+
+.values{
+  display:flex;
+  width:750px;
+  height: 200px;
+  text-align: center;
+  font-size:18px;
+}
+
+.values > p{
+  display:flex;
+  font-size:20px;
+  width:350px;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+  margin-right:0;
+}
+
+.values > h2{
+  display:flex;
+  width:200px;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+#info-wrapper{
+  width:100%;
+  height: 1200px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.works{
+  width:100%;
+  height: 600px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+}
+
+.works h1{
+  font-size:30px;
+  margin-bottom:20px;
+}
+
+.works p{
+  font-size: 24px;
+  margin-top:20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+.service{
+  width:100%;
+  height: 600px;
+  display:flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin-top:30px;
 }
 
-.App-link {
-  color: #61dafb;
+.card-list{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin-top:40px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-wrapper{
+  margin-left:20px;
+}
+
+.card-wrapper:first-child{
+  margin-left:0px;
+}
+
+.card-img{
+  width:600px;
+  height: 350px;
+  overflow: hidden;
+
+  box-shadow:0 2px 4px 0 hsla(0,0%,0%,0.1);
+}
+
+.card-img > a{
+  width:600px;
+  height: 350px;
+  position: absolute;
+  z-index: 999;
+  font-size:30px;
+  color:#fff;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+
+.card-img > a:hover{
+  opacity: 1;
+  background-color: rgba(0,0,0,0.5);
+  transition: all 1s;
+}
+
+.card-img > a:hover+img{
+  transform: scale(1.1);
+  transition: all 1s;
+}
+
+#partner{
+  width:100%;
+  height: 600px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top:30px;
+}
+
+#partner > h1{
+  margin-bottom:50px;
+}
+
+#news-wrapper{
+  width:100%;
+  height: 600px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#news-list{
+  margin-top:30px;
+  display:flex;
+  justify-content: center;
+  width:100%;
+}
+
+.news-card{
+  width:500px;
+  height: 450px;
+  margin:0px 20px;
+}
+
+.news-top{
+  overflow: hidden;
+  display:flex;
+}
+
+.news-top a{
+  position: absolute;
+  width:500px;
+  height: 300px;
+  z-index: 999;
+}
+
+.news-top img{
+  width:500px;
+  height: 300px;
+}
+
+.news-top > a:hover{
+  opacity: 1;
+  background-color: rgba(0,0,0,0.5);
+  transition: all 1s;
+}
+
+.news-top > a:hover+img{
+  transform: scale(1.1);
+  transition: all 1s;
+}
+
+.news-bottom > p{
+  font-size:20px;
 }
