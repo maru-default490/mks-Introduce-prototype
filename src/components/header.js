@@ -17,21 +17,21 @@ const HeaderStyled = styled.div`
         font-weight:bold;
         text-decoration:none;
     }
-    header ul{
+    header nav{
         width:200px;
         display:flex;
         flex-direction: row;
     }
-    header ul li{
+    header nav li{
         list-style:none;
         margin:0;
     }
 
-    header ul li:first-child::after{
+    header nav li:first-child::after{
         content:"|";
         margin:0px 20px;
     }
-    header ul li a{
+    header nav li a{
         color:black;
         text-decoration:none;
     }
@@ -47,10 +47,10 @@ class Header extends( Component ){
             <HeaderStyled>
                 <header>
                     <a href="#" className="logo"><Makestartext /></a>
-                    <ul>
+                    <nav>
                         <li><a href="#" className="selected">회사 소개</a></li>
                         <li><a href="#">채용</a></li>
-                    </ul>
+                    </nav>
                 </header>
             </HeaderStyled>
         );
