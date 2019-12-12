@@ -18,6 +18,7 @@ class NewsCard extends Component{
                     <p>{this.props.content}</p>
                     <p>{this.props.date}</p>
                 </div>
+                
             </div>
         )
     }
