@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
 
-const WorkStyled = styled.div`
+const WorkStyled = styled.section`
     background-color:pink;
     display:flex;
     justify-content: center;

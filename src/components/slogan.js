@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-const SloganStyled = styled.div`
+const SloganStyled = styled.section`
 
-    .SloganInner{
-        padding: 10px;
         width:100%;
         height:600px;
         display:flex;
@@ -12,38 +10,40 @@ const SloganStyled = styled.div`
         align-item:center;
         margin-top:270px;
         border-bottom:1px solid #f2f2f2;
-    }
-    .SloganInner div{
-        display:flex;
-        flex-direction:column;
-        align-item:center;
-    }
-    .SloganTitle{
-        font-size:130px;
-        margin-top:0;
-        margin-bottom:5px;
-    }
-    p{
-        font-size:23px;
-        display:flex;
-        margin:0 auto;
-        display:flex;
-        justify-content:center;
-        align-item:center;
-    }
+
+        div{
+            display:flex;
+            flex-direction:column;
+            align-item:center;
+
+
+            .SloganTitle{
+                font-size:130px;
+                margin-top:0;
+                margin-bottom:5px;
+            }
+
+            p{
+                font-size:23px;
+                display:flex;
+                margin:0 auto;
+                display:flex;
+                justify-content:center;
+                align-item:center;
+            }
+        }
+    
 `;
 
 class Slogan extends (Component){
     render(){
         return(
             <SloganStyled>
-                <section class="SloganInner">
                     <div>
                         <h1 className="SloganTitle">MAKE YOUR OWN STAR</h1>
                         <p>We offer special experiences and opportunities for K-culture fans and artist
                         in K-pop centers around the world.</p>
                     </div>
-                </section>
             </SloganStyled>
         );
     }

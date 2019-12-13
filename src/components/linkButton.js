@@ -7,13 +7,13 @@ const LinkBtns = styled.a`
     width:50%;
     height:100%;
     background-color:#fff;
-    border:none;
     font-size:32px;
     text-align:center;
     line-height:250px;
     margin:0;
     text-decoration:none;
     color:#333;
+    border-top:1px solid #f2f2f2;
 `;
 
 class LinkBtn extends Component{

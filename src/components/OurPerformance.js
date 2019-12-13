@@ -6,6 +6,7 @@ import PerformanceBox from './OurPerformanceBox';
 const PerformanceStyled = styled.div`
 
     width: 1000px;
+    height:500px;
     display:flex;
     align-item:center;
     justify-content:space-around;
@@ -14,13 +15,12 @@ const PerformanceStyled = styled.div`
 
     div{
         width:200px;
+        height:200px;
         display:flex;
         flex-direction:column;
         justify-content:center; 
-        height:auto;
         text-align:center;
         margin-top:220px;
-        margin-bottom:200px;
 
         img{
             display:flex;

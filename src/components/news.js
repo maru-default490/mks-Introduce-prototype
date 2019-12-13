@@ -3,15 +3,15 @@ import NewsCard from './newsCard';
 import styled from 'styled-components';
 
 const NewsStyle = styled.section`
-    width:100%;
-    height: 600px;
+    width:1000px;
+    margin:0 auto;
+    height:auto;
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   
   #news-list{
-    margin-top:30px;
     display:flex;
     justify-content: center;
     width:100%;
@@ -20,30 +20,29 @@ const NewsStyle = styled.section`
   .news-card{
     width:500px;
     height: 450px;
-    margin:0px 20px;
+    margin:100px 50px 100px 50px;
   }
   
   .news-top{
     overflow: hidden;
     display:flex;
-  }
-  
-  .news-top a{
-    position: absolute;
-    width:500px;
-    height: 300px;
-    z-index: 999;
-  }
-  
-  .news-top img{
-    width:500px;
-    height: 300px;
-  }
-  
-  .news-top > a:hover{
-    opacity: 1;
-    background-color: rgba(0,0,0,0.5);
-    transition: all 1s;
+
+    a{
+      position: absolute;
+      width:450px;
+      height: 300px;
+      z-index: 999;
+
+      :hover{
+        opacity: 1;
+        background-color: rgba(0,0,0,0.5);
+        transition: all 1s;
+      }
+    }
+    img{
+      width: 450px;
+      height: 300px;
+    }
   }
   
   .news-top > a:hover+img{
@@ -54,7 +53,9 @@ const NewsStyle = styled.section`
   .news-bottom > p{
     font-size:20px;
   }
-  
+  h2{
+    margin-top:100px;
+  }
 `;
 
 class News extends Component {
@@ -79,7 +80,7 @@ class News extends Component {
     render() {
         return (
             <NewsStyle>
-                <h1>언론보도</h1>
+                <h2>언론보도</h2>
                 <div id="news-list">
                     {this.state.posts.map((key,id) => {
                         return (<NewsCard title={key.title} content={key.content} date={key.date} key={id}/>)

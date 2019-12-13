@@ -9,7 +9,7 @@ const Links = styled.section`
     display:flex;
 
     a:first-child{
-        border-right:1px solid #ddd;
+        border-right:1px solid #f2f2f2;
     }
 `;
 

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Corebox from'./coreBox';
 
 
-const CorevalueStyled = styled.div`
+const CorevalueStyled = styled.section`
         width:1000px;
         height:1000px;
         margin:0 auto;

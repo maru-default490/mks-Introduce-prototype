@@ -8,14 +8,9 @@ const LocationStyle = styled.section`
     display:flex;
     flex-direction:column;
     justify-content:center;
-    position:relative;
 
-    h1{
-        position:absolute;
-        top:100px;
-        left:50%;
-        transform:translateX(-50%);
-        font-size:40px;
+    h2{
+        margin: 0 auto;
     }
 
     nav{
@@ -23,6 +18,7 @@ const LocationStyle = styled.section`
         height:auto;
         display:flex;
         justify-content:center;
+        margin: 0 auto;
 
         li{
             float:left;
@@ -78,7 +74,7 @@ class Location extends Component{
     render(){
         return(
             <LocationStyle>
-                <h1>Location</h1>
+                <h2>Location</h2>
 
                 <nav>
                     <li><button >본사</button></li>
