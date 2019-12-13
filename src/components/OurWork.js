@@ -1,5 +1,6 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
+import VisibilitySensor from 'react-visibility-sensor';
 
 const WorkStyled = styled.section`
     background-color:pink;
@@ -11,7 +12,8 @@ const WorkStyled = styled.section`
     color:white;
 
     .WorkBack{
-        width:100vw;
+        width:100%;
+        position:absolute;
         height: auto;
         justify-content:center;
         align-item:center;
@@ -32,23 +34,47 @@ const WorkStyled = styled.section`
     } 
     
 `;
-
 function WorkBack(){
-    window.addEventListener('scroll', function(){
-        if(window.scrollY >= 1500){
-            this.document.getElementById("WorkStyled").style.cssText=`
-                                                                     width:100%;
-                                                                     transition: 1.5s
-                                                                     cubic-bezier(0.215, 0.61, 0.355, 1)`;
-        }
-    })
+    document.getElementById("WorkStyled").style.cssText = `
+                                                            width:100%;
+                                                            transition: 1.5s
+                                                            cubic-bezier(0.215, 0.61, 0.355, 1)`;
 }
 
-class OurWork extends Component{
-        render(){
+
+class OurWork extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            visible: '',
+        }
+    }
+
+    onChange = (isVisible) => {
+        if (isVisible === true) {
+            this.setState({
+                visible: 'visible',
+            })
+        } else {
+            this.setState({
+                visible: 'hidden',
+            })
+        }
+    }
+
+    render() {
+        const visible = this.state.visible;
+
+        if (visible === 'visible') {
             WorkBack();
-            return(
-                <WorkStyled id="WorkStyled">
+        } else {
+            const temp = <p></p>;
+        }
+
+        return (
+
+            <WorkStyled id="WorkStyled">
+                <VisibilitySensor onChange={this.onChange}>
                     <div className="WorkBack">
                         <h2>Our Work</h2>
                         <p>MakeStar는 한류 스타와 전세계 팬들을 연결하여</p>
@@ -57,8 +83,9 @@ class OurWork extends Component{
                         <p>크라우드펀딩 기반 엔터테이먼트 콘텐츠 플랫폼으로</p>
                         <p>전세계 200여개국의 팬들이 스타와 소통하고 있습니다.</p>
                     </div>
-                </WorkStyled>
-            );
-        }
+                </VisibilitySensor>
+            </WorkStyled>
+        );
+    }
 }
 export default OurWork;

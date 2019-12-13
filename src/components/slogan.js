@@ -2,17 +2,16 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const SloganStyled = styled.section`
-
         width:100%;
-        height:620px;
+        height:100vh;
         display:flex;
         justify-content:center;
         align-item:center;
         padding-top:270px;
         border-bottom:1px solid #f2f2f2;
-        background-color:pink;
-        
+        background-color:pink;    
         position:fixed;
+        top:50px;
         z-index:-999;
 
         div{

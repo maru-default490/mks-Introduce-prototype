@@ -8,8 +8,7 @@ import OurWork from './components/OurWork';
 import OurService from './components/OurService';
 import Performance from './components/OurPerformance';
 import Partnership from './components/partnership';
-// import News from './components/news';
-// import Location from './components/location';
+import Location from './components/location';
 import Link from './components/link';
 import Footer from './components/footer';
 
@@ -25,8 +24,8 @@ class App extends Component {
             <OurService/>
             <Performance/>
             <Partnership />
-            {/* <News />
-            <Location /> */}
+            {/* <News /> */}
+            <Location />
             <Link />
         </div>
         <Footer />

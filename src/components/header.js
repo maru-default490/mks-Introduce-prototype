@@ -3,12 +3,18 @@ import Makestartext from './makestartext';
 import styled from 'styled-components';
 
 const HeaderStyled = styled.header`
+        position:fixed;
+        top:0;
+        left:0;
+        right:0;
         width:100%;
         height:50px;
         display:flex;
         justify-content: space-between;
         align-items:center;
         border-bottom:1px solid #f2f2f2;
+        background-color:#fff;
+        z-index:999;
         
         
         nav{
