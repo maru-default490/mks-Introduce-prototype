@@ -15,7 +15,7 @@ const CorevalueStyled = styled.section`
         margin:0 auto;
     }
     h2{
-        margin-top:100px;
+        padding-top:100px;
         display:flex;
         justify-content:center;
     }

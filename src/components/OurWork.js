@@ -9,6 +9,7 @@ const WorkStyled = styled.section`
     width:1px;
     height:500px;
     color:white;
+    margin-top:100px;
 
     .WorkBack{
         width:100vw;

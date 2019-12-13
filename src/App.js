@@ -12,6 +12,7 @@ import Partnership from './components/partnership';
 // import Location from './components/location';
 import Link from './components/link';
 import Footer from './components/footer';
+import Test from './components/corevalue-test';
 
 class App extends Component {
   render(){
@@ -21,6 +22,7 @@ class App extends Component {
         <Slogan/>
         <div className="topSection">
             <Corevalue/>
+            <Test />
             <OurWork/>
             <OurService/>
             <Performance/>

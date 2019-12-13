@@ -52,7 +52,8 @@ class OurPerformance extends Component{
         this.state={
             PerformanceImg:"",
             CountTitle:"",
-            CountEnd:""
+            CountEnd:"",
+            Countdecimal:""
         }
     }
     render(){
@@ -62,10 +63,11 @@ class OurPerformance extends Component{
                 <PerformanceBox
                     PerformanceImg="/img/clock.png"
                     CountTitle="Service launch"
-                    CountEnd="2015"/>
+                    CountEnd="2015.12"
+                    Countdecimal="2"/>
                 <PerformanceBox
                     PerformanceImg="img/earth.png"
-                    CountTitle="방문 국가"
+                    CountTitle="방문 국가"              
                     CountEnd="202"/>
                 <PerformanceBox
                     PerformanceImg="img/money.png"

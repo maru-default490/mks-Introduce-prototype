@@ -11,7 +11,7 @@ const SloganStyled = styled.section`
         padding-top:270px;
         border-bottom:1px solid #f2f2f2;
         background-color:pink;
-        
+        top:50px;
         position:fixed;
         z-index:-999;
 
