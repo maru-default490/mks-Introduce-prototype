@@ -36,22 +36,15 @@ const PerformanceStyled = styled.div`
             align-item:center;
             justify-content:center;
         }
+        span{
+            font-size:2.3em;
+        }
     }
     h2{
         position:absolute;
         margin-top:100px;
     }
 `;
-// function WorkBack(){
-//     window.addEventListener('scroll', function(){
-//         if(window.scrollY >= 1500){
-//             this.document.getElementById("WorkStyled").style.cssText=`
-//                                                                      width:100%;
-//                                                                      transition: 1.5s
-//                                                                      cubic-bezier(0.215, 0.61, 0.355, 1)`;
-//         }
-//     })
-// }
 
 class OurPerformance extends Component{
     constructor(props){

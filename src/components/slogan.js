@@ -4,12 +4,16 @@ import styled from 'styled-components';
 const SloganStyled = styled.section`
 
         width:100%;
-        height:600px;
+        height:620px;
         display:flex;
         justify-content:center;
         align-item:center;
-        margin-top:270px;
+        padding-top:270px;
         border-bottom:1px solid #f2f2f2;
+        background-color:pink;
+        
+        position:fixed;
+        z-index:-999;
 
         div{
             display:flex;

@@ -19,14 +19,16 @@ class App extends Component {
       <>
         <Header/>
         <Slogan/>
-        <Corevalue/>
-        <OurWork/>
-        <OurService/>
-        <Performance/>
-        <Partnership />
-        {/* <News />
-        <Location /> */}
-        <Link />
+        <div className="topSection">
+            <Corevalue/>
+            <OurWork/>
+            <OurService/>
+            <Performance/>
+            <Partnership />
+            {/* <News />
+            <Location /> */}
+            <Link />
+        </div>
         <Footer />
       </>
     );

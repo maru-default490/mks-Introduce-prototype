@@ -4,10 +4,16 @@ import Corebox from'./coreBox';
 
 
 const CorevalueStyled = styled.section`
-        width:1000px;
+
+        width:100%;
         height:1000px;
+        background-color:white;
+        margin-top:840px;
+        
+    .innerBox{
+        width:1000px;
         margin:0 auto;
-    
+    }
     h2{
         margin-top:100px;
         display:flex;
@@ -71,16 +77,18 @@ class Corevalue extends (Component){
         return(
             <CorevalueStyled>
                     <h2>CORE VALUE</h2>
-                    <div id="Core">
-                        {
-                            this.state.posts.map(({title, id, body}) => {
-                                return (
-                                    <Corebox
-                                        key={id}
-                                        coretext={body} coretitle={title}/>
-                                )
-                            })
-                        }
+                    <div className="innerBox">
+                        <div id="Core">
+                            {
+                                this.state.posts.map(({title, id, body}) => {
+                                    return (
+                                        <Corebox
+                                            key={id}
+                                            coretext={body} coretitle={title}/>
+                                    )
+                                })
+                            }
+                        </div>
                     </div>
             </CorevalueStyled>
         );
