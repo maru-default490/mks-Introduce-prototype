@@ -14,7 +14,10 @@ const SloganStyled = styled.section`
         top:50px;
         position:fixed;
         z-index:-999;
-
+        color:white;
+        background-image: url('img/sloganimg.jpg');
+        background-repeat: no-repeat;
+        background-position:center center;
         div{
             display:flex;
             flex-direction:column;

@@ -16,7 +16,7 @@ const OurServiceStyled = styled.div`
             height:auto;
             display:flex;
             flex-direction:column;
-            margin: 220px 0px 100px 0px;
+            margin: 220px 0px 0px 0px;
     
             img{
                 width:auto;

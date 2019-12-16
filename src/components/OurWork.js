@@ -9,7 +9,7 @@ const WorkStyled = styled.section`
     width:1px;
     height:500px;
     color:white;
-    margin-top:100px;
+    margin-top:400px;
 
     .WorkBack{
         width:100vw;
@@ -36,7 +36,7 @@ const WorkStyled = styled.section`
 
 function WorkBack(){
     window.addEventListener('scroll', function(){
-        if(window.scrollY >= 1500){
+        if(window.scrollY >= 600){
             this.document.getElementById("WorkStyled").style.cssText=`
                                                                      width:100%;
                                                                      transition: 1.5s

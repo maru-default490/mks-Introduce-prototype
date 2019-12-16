@@ -3,16 +3,14 @@ import './App.css';
 
 import Header from './components/header';
 import Slogan from './components/slogan';
-import Corevalue from './components/corevalue';
 import OurWork from './components/OurWork';
 import OurService from './components/OurService';
 import Performance from './components/OurPerformance';
 import Partnership from './components/partnership';
-// import News from './components/news';
-// import Location from './components/location';
+import Location from './components/location';
 import Link from './components/link';
 import Footer from './components/footer';
-import Test from './components/corevalue-test';
+import Corevalue from './components/corevalue';
 
 class App extends Component {
   render(){
@@ -21,16 +19,16 @@ class App extends Component {
         <Header/>
         <Slogan/>
         <div className="topSection">
-            <Corevalue/>
-            <Test />
+            <Corevalue />
             <OurWork/>
             <OurService/>
             <Performance/>
             <Partnership />
-            {/* <News />
-            <Location /> */}
+            <Location/>
             <Link />
         </div>
+                
+              
         <Footer />
       </>
     );

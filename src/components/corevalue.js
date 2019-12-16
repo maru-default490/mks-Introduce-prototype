@@ -1,97 +1,106 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import styled from 'styled-components';
-import Corebox from'./coreBox';
+import Corevaluebox from './corevalue-box';
 
-
-const CorevalueStyled = styled.section`
-
-        width:100%;
-        height:1000px;
-        background-color:white;
-        margin-top:840px;
-        
-    .innerBox{
-        width:1000px;
-        margin:0 auto;
-    }
+const CoreStyled = styled.div`
+    width:1000px;
+    height:600px;
+    margin:0 auto;
+    margin-top: 1200px;
     h2{
+        text-align:center;
         padding-top:100px;
-        display:flex;
-        justify-content:center;
-    }
-    .coreBox{
-        width:100%;
-        height:80px;
-        display:flex;
-        flex-direction:row;
-        margin-top:100px;
+        margin-bottom:150px;
 
-        & .coreText{
-            width: 700px;
-            height:auto;
-            margin-right:50px;
-            text-align: left;
-        }
-        
     }
-    span{
-        width:200px;
-        height:80px;
+
+    .coreBox{
         display:flex;
-        align-item:center;
+        justify-content:space-between;
+        align-items:center;
+        height:100%;
+
+        .backimg{
+            width:400px;
+            height:400px;
+            background-color:gray;
+        }
+            ul{
+                width:auto;
+                height:auto;
+                li{
+
+                    list-style:none;
+                    margin-bottom:35px;
+                    border-bottom:1px solid lightgray;
+                    
+                    .coretext-box{
+                        display:flex;
+                        align-items:center;
+                        height:100px;
+                        margin-bottom:30px;
+                        
+                        p{
+                            width:400px;
+                            font-size:0.85em;
+                        }
+                        img{
+                            width:64px;
+                            height:64px;
+                            margin: 50px 40px 10px 0px;
+                        }
+                    }
+                }
+                li:last-child{
+                    border-bottom:none;
+                }
+        }
     }
     
+
 `;
 
-class Corevalue extends (Component){
+class CoreValue extends Component{
     constructor(props){
         super(props);
         this.state={
-            posts: []
+            coreTitle:'',
+            coreImg:'',
+            coreText:''
         }
     }
-
-    fetchPosts = num => {
-        fetch(`https://jsonplaceholder.typicode.com/${num}`)
-        .then(response => response.json())
-        .then(json=>{
-            const result = json.filter((item) => {
-                if(item.id % 10 === 0 && item.id <= 50){
-                    return true
-                }else{
-                    return false
-                }
-            })
-
-            this.setState({
-                posts: result
-            })
-        })
-    }
-
-    componentDidMount(){
-        this.fetchPosts('posts')
-    }
-
     render(){
         return(
-            <CorevalueStyled>
-                    <h2>CORE VALUE</h2>
-                    <div className="innerBox">
-                        <div id="Core">
-                            {
-                                this.state.posts.map(({title, id, body}) => {
-                                    return (
-                                        <Corebox
-                                            key={id}
-                                            coretext={body} coretitle={title}/>
-                                    )
-                                })
-                            }
-                        </div>
+            <CoreStyled>
+                <h2>CoreValue</h2>
+
+                    <div className="coreBox">
+                    <div className="backimg">{/*이미지 넣는 부분 */}</div>
+                            <ul>
+                                <Corevaluebox
+                                    coreTitle="MOVING"
+                                    coreImg="img/gift.png"
+                                    coreText="우리는 전세계 팬들에게 MAKESTAR만의 경험과 재미 그리고 감동을 선물합니다."
+                                />
+                                <Corevaluebox
+                                    coreTitle="OPPORTUNITY"
+                                    coreImg="img/diamond.png"
+                                    coreText="우리는 아티스트들에게 팬들에게 더 가까이 다가가고 더 많은 꿈을 이룰 수 있는 기회를 제공합니다."
+                                />
+                                <Corevaluebox
+                                    coreTitle="BORDERLESS"
+                                    coreImg="img/puzzle.png"
+                                    coreText="우리는 글로벌 문화 콘텐츠를 소개하고 공유하는 국경 없는 소통 공간입니다."
+                                />
+                                <Corevaluebox
+                                    coreTitle="VALUABLE"
+                                    coreImg="img/graph.png"
+                                    coreText="우리는 유익하고 신뢰할 수 있는 정보를 제공하기 위해 끊임없이 연구하는 전문가 집단입니다."
+                                />
+                            </ul>
                     </div>
-            </CorevalueStyled>
+            </CoreStyled>
         );
     }
 }
-export default Corevalue;
+export default CoreValue;

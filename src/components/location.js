@@ -1,103 +1,73 @@
 import React, { Component } from 'react';
+import VisibilitySensor from 'react-visibility-sensor';
 import styled from 'styled-components';
+import LocationItem from './locationItem';
 
-const LocationStyle = styled.section`
+const LocationStyled = styled.section`
     width:100%;
-    height:800px;
-    background-color:#fafafa;
+    height:600px
+    background-color: #fafafa;
     display:flex;
-    flex-direction:column;
     justify-content:center;
+    align-items:center;
+    position:relative;
 
-    h2{
-        margin: 0 auto;
-    }
-
-    nav{
-        width:300px;
-        height:auto;
+    #location-list{
         display:flex;
-        justify-content:center;
-        margin: 0 auto;
-
-        li{
-            float:left;
-            list-style:none;
-            margin:0;
-
-            button{
-                width:75px;
-                border:none;
-                background-color: rgba(0,0,0,0);
-                cursor:pointer;
-                font-size:16px;
-            }
-        }
-    }
-
-    #map-wrapper{
-        width:100%;
-        height:auto;
-        display:flex;
-        justify-content:center;
-        margin-top:30px;
-        
-        #map{
-            width:700px;
-            height:400px;
-            background-color:#fff;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            margin-right:0;
-        }
-
-        #location-info{
-            width:350px;
-            margin-left:50px;
-            display:flex;
-            flex-direction:column;
-            justify-content:center;
-
-            p{
-                margin:0;
-            }
-        }
+        opacity:0;
+        transform:translate(-100px);
     }
 `;
 
-class Location extends Component{
-    constructor(props){
+function fadeIn(){
+    document.getElementById('location-list').style.cssText=`
+    transform:translate(0px);
+    transition:all 1s;
+    opacity:1;`;
+}
+
+class Location extends Component {
+    constructor(props) {
         super(props);
+        this.state = {
+            visible: '',
+        }
     }
 
-    render(){
-        return(
-            <LocationStyle>
-                <h2>Location</h2>
+    onChange = (isVisible) => {
+        if (isVisible === true) {
+            this.setState({
+                visible: 'visible',
+            })
+        } else {
+            this.setState({
+                visible: 'hidden',
+            })
+        }
+    }
 
-                <nav>
-                    <li><button >본사</button></li>
-                    <li><button >물류센터</button></li>
-                </nav>
+    render() {
+        const check = this.state.visible;
 
-                <div id="map-wrapper">
-                    <div id="map">
-                        맵 대체 영역
+        if(check === 'visible'){
+            fadeIn();
+            console.log("visible");
+        }else{
+            const temp = <p></p>;
+        }
+        return (
+            <VisibilitySensor onChange={this.onChange}>
+                <LocationStyled>
+                    <div id="location-list">
+                        <LocationItem imgsrc='/img/paper-plane.png' title="CONTACT" tel="02-1234-1234" fax="02-4321-4321" mail="service@mailmail.com"/>
+                        <LocationItem imgsrc='/img/location.png' title="LOCATION" location="서울시 OO동 XX길 XX-XX AA층"/>
+                        <LocationItem imgsrc='/img/job-seeker.png' title="RECRUIT" tel="02-1234-1234" mail="service@mailmail.com"/>
                     </div>
-
-                    <div id="location-info">
-                        <p>(주)메이크스타</p>
-                        <p>서울특별시 강남구 대치동</p>
-                        <p>영동대로85길 34 13층</p>
-
-                        <p>(446-599)경기 용인시 기흥구</p>
-                        <p>신갈동 537-11</p>
-                    </div>
-                </div>
-            </LocationStyle>
+                </LocationStyled>
+            </VisibilitySensor>
         )
     }
+
 }
 
 export default Location;
